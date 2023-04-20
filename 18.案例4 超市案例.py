@@ -11,16 +11,17 @@
 """
 import random
 total = 0  # 定义当前的消费金额
-
+sum1 = 0
 while True:
-    number = random.randint(0, 10000)
-    money = random.uniform(0, 10000)
+    number = int(input("请输入你要购买的物品数量:"))
+    sum1 += number
+    money = float(input("请输入该商品的单价:"))
     total += number * money
     print("此时的消费金额为%.2f" % total, "是否继续购买?")
     answer = input("按任意键继续/按q退出:")
     if answer == 'q':
         break
-print("你的消费金额为%.2f" % total)
+print("你总共购买物品的数量为%d,总消费金额为%.2f" % (sum1, total))
 
 
 
