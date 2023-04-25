@@ -103,11 +103,11 @@ print(str6.split("i"))  # ['th', 's ', 's a str', 'ng example']
 
 # splitlines()  按行切割
 
-str61 = """你来吃饭吧!
+str6_1 = """你来吃饭吧!
 你来跳舞吧!
 你来学习吧!
 """
-print(str61.splitlines())  # ['你来吃饭吧!', '你来跳舞吧!', '你来学习吧!']
+print(str6_1.splitlines())  # ['你来吃饭吧!', '你来跳舞吧!', '你来学习吧!']
 
 # partition() 将字符串分成三部分, 分隔符左边, 分隔符, 分隔符右边
 
@@ -144,21 +144,21 @@ print(str7.capitalize())  # I miss you very much
 # rstrip() 只去除字符串右边的指定字符
 """
 str8 = "    today is a nice day    "
-str81 = "****today is a nice day****"
-print(str8)                 #    today is a nice day
-print(str8.strip())         # today is a nice day
-print(str81)                 # ****today is a nice day****
-print(str81.strip("*"))      # today is a nice day
-print(str81.lstrip("*"))     # today is a nice day****
-print(str81.rstrip("*"))     # ****today is a nice day
+str8_1 = "****today is a nice day****"
+print(str8)                   # today is a nice day
+print(str8.strip())           # today is a nice day
+print(str8_1)                 # ****today is a nice day****
+print(str8_1.strip("*"))      # today is a nice day
+print(str8_1.lstrip("*"))     # today is a nice day****
+print(str8_1.rstrip("*"))     # ****today is a nice day
 
 
 # center()   将给定字符放在正中央
-str82 = 'center'
-print(str82.center(30))  # 在30个字符中, 将center放在正中央
+str8_2 = 'center'
+print(str8_2.center(30))  # 在30个字符中, 将center放在正中央
 
 # ljust()  左对齐, 将字符放在最左边
-print(str82.ljust(30))  # 在30个字符中, 将center放在最左边
+print(str8_2.ljust(30))  # 在30个字符中, 将center放在最左边
 
 # rjust()  右对齐, 将字符放在最右边
 

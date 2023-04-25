@@ -19,9 +19,23 @@ print(list2[1])  # 123
 # 4. 切边操作也与字符串保持一致, 返回的仍是一个列表
 print(list2[:2])  # ['1', '123']
 
-
-
-
+# 5. 遍历列表
+list3 = ['幻影', '兰博基尼', '玛莎拉蒂', 'g36', 123, True, False]
+# 第一种方式 通过for循环进行遍历
+'''
+for i in list3:
+    print(i)
+'''
+# 第二种方式
+for index, value in enumerate(list3):
+    print(index, value)
+# 0 幻影
+# 1 兰博基尼
+# 2 玛莎拉蒂
+# 3 g36
+# 4 123
+# 5 True
+# 6 False
 
 
 
