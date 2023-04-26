@@ -81,7 +81,35 @@ for i in range(n):
     循环体
 else:
     如果上面的for循环, 循环了0-n-1次,没有出现中断
+----------------------------------------------------------------------------------------------------------------------
+在Python中，for else语句的使用方式是：
 
+for item in sequence:
+    if condition:
+        # some code to execute
+        break
+else:
+    # some code to execute if the loop completes without hitting a "break" statement
+    
+在这个结构中，for循环遍历一个序列（如列表、元组、字符串等），并执行其中的代码块。
+如果在执行代码块的过程中满足某个条件，程序将执行break语句并跳出循环。
+否则，当循环结束时，程序将执行else语句中的代码块。
+
+"""
+
+# 实例
+
+fruits = ["apple", "banana", "cherry"]
+for fruit in fruits:
+    if fruit == "banana":
+        print("I found the banana!")
+        break
+else:
+    print("I searched everywhere, but could not find the banana.")
+
+"""
+在这个示例中，程序将遍历水果列表并查找香蕉。当程序找到香蕉时，它将打印"I found the banana!"，并执行break语句跳出循环。
+否则，当循环结束时，程序将执行else语句中的代码块，并打印"I searched everywhere, but could not find the banana."
 """
 
 # while else 也是一样的用法
