@@ -64,3 +64,30 @@ for i in set1:
 # 34
 # 99
 # 56
+
+# 8. 交集 intersection(&)  并集 union(|)   差集 difference(-)
+
+set2 = {1, 2, 3, 4, 5}
+set3 = {3, 4, 5, 6, 7, 8, 9}
+
+result = set2.intersection(set3)
+print(result)  # {3, 4, 5}
+
+result1 = set2.union(set3)
+print(result1)  # {1, 2, 3, 4, 5, 6, 7, 8, 9}
+
+result2 = set2.difference(set3)  # set2不同于set3的地方
+print(result2)  # {1, 2}
+
+result3 = set3.difference(set2)
+print(result3)  # {8, 9, 6, 7}
+
+# 符号运算
+
+print(set2 & set3)  # {3, 4, 5}
+print(set2 | set3)  # {1, 2, 3, 4, 5, 6, 7, 8, 9}
+print(set2 - set3)  # {1, 2}
+
+
+
+
