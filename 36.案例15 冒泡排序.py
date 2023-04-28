@@ -8,9 +8,9 @@
 
 def bubble_sort(arr):
     n = len(arr)
-    # 外层循环控制遍历次数
+    # 外层循环控制遍历次数, 有多少轮比较
     for i in range(n - 1):
-        # 内层循环控制比较和交换操作
+        # 内层循环控制比较和交换操作, 每轮比较, 进行的次数
         for j in range(n - 1 - i):
             if arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
