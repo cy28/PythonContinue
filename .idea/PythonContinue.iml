@@ -4,7 +4,7 @@
     <content url="file://$MODULE_DIR$" />
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module" module-name="HTML" />
     <orderEntry type="module" module-name="PythonLearning" />
+    <orderEntry type="module" module-name="SpiderLearning" />
   </component>
 </module>
