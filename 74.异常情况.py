@@ -71,7 +71,8 @@ except:
 
 
 finally:  
-# 无论是否有异常，都会执行finally块中的代码, 且前面如果有return, 这里还是要执行
+# 无论是否有异常，都会执行finally块中的代码, 且前面如果有return, 这里finally还是要执行
+# 且如果finally有return, 会把之前的return覆盖掉
 """
 
 
