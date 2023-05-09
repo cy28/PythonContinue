@@ -18,14 +18,46 @@ print(Math.add(2, 3))       # 输出：5
 print(Math.subtract(5, 2))  # 输出：3
 
 
+class MyClass:
+    class_variable = "This is a class variable."
+
+    @staticmethod
+    def static_method():
+        print("This is a static method.")
+        print(MyClass.class_variable)
+
+    @classmethod
+    def class_method(cls):
+        print("This is a class method.")
+        print("The value of class_variable is:", cls.class_variable)
+
+
+MyClass.static_method()
+# Output: This is a static method.
+#         This is a class variable.
+
+MyClass.class_method()
+# Output:
+# This is a class method.
+# The value of class_variable is: This is a class variable.
+
+
+
+"""
+总结: 类方法       静态方法
+不同:
+    1. 装饰器不同
+    2. 类方法有参数cls, 静态方法没有参数
+相同:
+    1. 类方法可以访问类属性, 而静态方法也可以通过类名访问类属性
+    2. 不能访问对象属性
+    3. 都可以在创建对象前使用, 不依赖于对象
 
 
 
 
 
-
-
-
+"""
 
 
 
