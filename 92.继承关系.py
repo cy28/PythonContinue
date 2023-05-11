@@ -10,6 +10,7 @@ class 类名(父类名):
 
 子类继承自父类. 可以直接享受父类中封装好的方法, 不需要再次开发
 子类中应该根据职责, 封装子类特有的属性和方法
+父类中私有的属性和方法, 子类无法继承
 
 """
 
@@ -34,7 +35,9 @@ class Dog(Animal):                          # 在子类中继承父类，只需�
         # 第一种，通过父类名字调用父类的构造函数
         # Animal.__init__(name, age)        # 再继承父类属性
         # 第二种，隐式继承父类的构造函数
+        # 相当于 super() = Animal, 这里就是Animal.__init__是什么就看Animal类的__init__的操作
         super().__init__(name, age)         # 再继承父类属性 super()找到父类, 然后执行父类的init
+
         self.breed = breed                  # 初始化自己的属性
 
     # def speak(self):
