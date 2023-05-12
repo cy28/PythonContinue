@@ -18,7 +18,7 @@ mode的参数默认为rt
 """
 
 # 1. 我们想读取一个文件中的内容
-# open函数其返回值是一个stream. 用f变量去接这个流, 相当于open函数在pycharm和磁盘中的文件建立了一个链路, 用f1为这个链路命名
+# open函数其返回值是一个stream(实际上是一个文件对象). 用f变量去接这个流, 相当于open函数在pycharm和磁盘中的文件建立了一个链路, 用f1为这个链路命名
 # 新建文档的默认编码方式为gbk, 而python默认的解码方式是utf-8, 所以我们要把编码方式设为utf-8
 # 读文件的时候, 给文件一个名字
 f1 = open('0.test_document/test1_66', 'r', encoding='utf-8')
