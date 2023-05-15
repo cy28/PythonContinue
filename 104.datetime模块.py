@@ -15,3 +15,67 @@ now() 函数：返回当前日期和时间的 datetime 对象。
 utcnow() 函数：返回当前的 UTC 日期和时间的 datetime 对象
 
 """
+
+import datetime
+
+# 1. datetime.datetime.now() 获取当前日期和时间
+current_datetime = datetime.datetime.now()
+print("当前日期和时间:", current_datetime)
+# 当前日期和时间: 2023-05-12 10:46:23.496104
+
+# 2. datetime.datetime() 创建一个特定的日期和时间
+specific_datetime = datetime.datetime(2023, 5, 12, 10, 30, 0)
+print("特定日期和时间:", specific_datetime)
+# 特定日期和时间: 2023-05-12 10:30:00
+
+# 3. 获取日期和时间的各个部分
+year = specific_datetime.year
+month = specific_datetime.month
+day = specific_datetime.day
+hour = specific_datetime.hour
+minute = specific_datetime.minute
+second = specific_datetime.second
+print("年:", year)
+print("月:", month)
+print("日:", day)
+print("时:", hour)
+print("分:", minute)
+print("秒:", second)
+
+# 4. .strftime() 相当于对象的方法, 格式化日期和时间为字符串
+formatted_datetime = specific_datetime.strftime("%Y-%m-%d %H:%M:%S")
+print("格式化后的日期和时间:", formatted_datetime)
+# 格式化后的日期和时间: 2023-05-12 10:30:00
+
+# 5. .strptime() 解析字符串为日期和时间
+parsed_datetime = datetime.datetime.strptime("2023-05-12 10:30:00", "%Y-%m-%d %H:%M:%S")
+print("解析后的日期和时间:", parsed_datetime)
+
+# 6. 执行日期和时间运算
+future_datetime = specific_datetime + datetime.timedelta(days=7)
+print("未来日期和时间:", future_datetime)
+
+# 7. 比较日期和时间
+is_future = future_datetime > current_datetime
+print("是否是未来时间:", is_future)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

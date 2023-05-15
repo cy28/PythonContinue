@@ -80,6 +80,7 @@ class ClassName:
 
 
 # 举例 类名的首字母要求大写, 采用驼峰式命名法
+# self直接看成每个实例对象就好
 
 class Person:  # 定义一个名为Person的类
 
