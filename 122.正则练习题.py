@@ -25,10 +25,15 @@ print(matches2_1)  # [('130429', '1919', '12', '01', '521', '9'), ('130429', '19
 # 3. 手机号
 # 1[3-9]\d[9]
 
+# 区分区号和号码, 区号可以是3位也可以是4位
 
+phone = '010-12345678'
 
+matches3 = re.match('(\d{3}|\d{4})-(\d{8})', phone)
 
-
+print(matches3.group())  # 010-12345678
+print(matches3.group(1))  # 010
+print(matches3.group(2))  # 12345678
 
 
 
