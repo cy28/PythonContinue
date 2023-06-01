@@ -1,4 +1,4 @@
-# 1. 当我们定义变量时, 如果没有传入父类, 就默认继承了object这个类
+# 1. 当我们定义一个类时, 如果没有传入父类, 就默认继承了object这个类
 
 class Student:  # 相当于 class Student(object):
     pass
@@ -20,8 +20,39 @@ person = Person('Jack')
 
 """
 
+# -----------------------------------------------------------------------------------------------------------------
 
 
+"""
+以下是在代码中补全 `__new__` 方法的示例：
+
+```python
+class Person:
+    def __new__(cls, *args, **kwargs):
+        instance = super().__new__(cls)
+        return instance
+    
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+person1 = Person("Alice", 30)
+
+# 输出实例对象的属性
+print(person1.name)  # 输出: Alice
+print(person1.age)   # 输出: 30
+```
+
+在上述代码中，我们在 `Person` 类中补全了 `__new__` 方法。在这个自定义的 `__new__` 方法中，我们使用 `super().__new__(cls)` 调用父类的 `__new__` 方法来创建实例对象。
+
+请注意，这里我们没有对实例对象进行其他处理或返回不同的实例对象，因此这个自定义的 `__new__` 方法与默认的 `__new__` 方法相同。在这种情况下，我们可以省略显式定义 `__new__` 方法，因为默认的 `__new__` 方法已经能够满足需求。
+
+最后，我们可以看到代码仍然能够正常创建 `Person` 类的实例对象，并成功访问到实例对象的属性。
+
+
+
+"""
 
 
 

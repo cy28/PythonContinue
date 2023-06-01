@@ -28,39 +28,43 @@ print(len(str1))  # 14
        index() 跟find一样, 区别在于找不到就报错
        rindex (right find) 从右往左找, 但返回的还是正数
 """
-str2 = "https://www.google.com/search?q=%E5%9B%BE%E7%89%87&oq=%E5%9B%BE%E7%89%87&aqs=chrome..69i57j0i512l9.3935j0j15" \
-       "&sourceid=chrome&ie=UTF-8#imgrc=xiBfxIqTCksYPM"
+str2 = "https://www.google.com/search"
 
-i = str2.find("M")
+i = str2.find("w")
 print(i)  # 153
 
-j = str2.rfind("M")
-print(i)  # 153
+j = str2.rfind("w")
+print(j)  # 153
 
 
 """
 3. 判断: startswith, endswith, isalpha, isdigit, isalnum, isspace  返回的都是bool类型
 """
+str2 = "https://www.google.com/search"
+
 # startswith 判断是否以什么开头
 start1 = str2.startswith('http')
 print(start1)  # True
 
 # endswith 判断是否以什么结尾的, 一般用于判断文件名
-end1 = str2.endswith("YPM")
+end1 = str2.endswith("search")
 print(end1)  # True
 
 # isalpha 只有字符串才能调用, 判断字符串是否是纯字母,返回True和False
-print(str2.isalpha())  # False
+alpha_string = "Hello"
+print(alpha_string.isalpha())  # True
 
 # isdigit 只有字符串才能调用, 判断字符串是否是纯数字,返回True和False
-print(str2.isdigit())  # False
+digit_string = "123456"
+print(digit_string.isdigit())  # True
 
 # isalnum 只有字符串才能调用, 判断字符串是否是字母和数字,返回True和False
-print(str2.isalnum())  # False
+alnum_string = "Hello123"
+print(alnum_string.isalnum())  # True
 
 # isspace 只有字符串才能调用, 判断字符串是否只包含空格,返回True和False
-str3 = 'asd    '
-print(str3.isspace())  # False
+space_string = '    '
+print(space_string.isspace())  # True
 
 # isupper()  判断字符串中的字母是否全部是大写
 print('HELLO'.isupper())  # True
